@@ -1,0 +1,13 @@
+# Default values for home-task.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+namespace: test
+nginx_image:
+  repository: nginx
+  tag: 1.19
+resources:
+  limits:      
+    memory: "1Gi"
+    cpu: "200m"

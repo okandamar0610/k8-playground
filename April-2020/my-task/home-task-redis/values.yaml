@@ -1,0 +1,13 @@
+# Default values for home-task.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+namespace: web
+redis_image:
+  repository: redis
+  tag: 6.0
+service:
+  spec:      
+    protocol: TCP
+    containerPort: 9090
