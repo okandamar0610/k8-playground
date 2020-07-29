@@ -1,0 +1,4 @@
+image:
+  repository: busybox
+  tag: 1.32
+name: hello

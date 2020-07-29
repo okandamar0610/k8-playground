@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ .Values.name }}
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 10
+      template:
+        spec:
+          containers:
+          - name: {{ .Values.name }}
+            image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+            args:
+            - /bin/sh
+            - -c
+            - uname;
+          restartPolicy: OnFailure
