@@ -1,0 +1,14 @@
+
+replicaset:
+  name: wordpress
+  replicas: 3
+  repository: wordpress:php7.2-apache  
+mysql:
+  repository: mysql:5.6
+  name: mysql
+ingress:
+  name: ingress      
+  domain: example.com
+services: 
+  name: wordpress
+  type: NodePort
